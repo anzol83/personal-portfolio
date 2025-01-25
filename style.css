@@ -1,0 +1,61 @@
+:root {
+    --color-primary: rgb(0, 0, 0);
+    --color-background: rgb(0, 0, 0);
+    --color-text: rgb(255, 255, 255);
+  }
+
+  .darkmode{
+    --color-primary: rgb(255, 255, 255);
+    --color-background: rgb(255, 255, 255);
+    --color-text: rgb(0, 0, 0);
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 0 15% 0 15%;
+    background-color: var(--color-background);
+  }
+  
+  nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 15px;
+    justify-content: space-between;
+  }
+  
+  nav .icons a {
+    font-size: 1.2rem;
+  }
+  
+  .menu {
+    flex: 1;
+  }
+  
+  .content {
+    padding: 0 15% 0 15%;
+  }
+  
+  h1, h2 {
+    font-size: 2em;
+  }
+  
+  .about-me {
+    font-size: large;
+    text-decoration: none;
+    background-color: var(--color-text);
+    
+  }
+  
+  .social-links {
+    display: flex;
+    font-size: 1.52rem;
+    gap: 33px;
+  }
