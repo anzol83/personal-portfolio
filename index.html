@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZ</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <nav>
         <div>
-            <img src="assets/images.png" 
+            <img src="assets/profile-image.jpg" 
             alt="profile-image" 
             style="height: 80px; border-radius: 50%;">
         </div>
         <div class="menu">
-            <a href="">Blogs</a>
-            <a href="">Projects</a>
-            <a href="">About</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#contact"> Contact</a>
         </div>
+        
         <div class="icons">
             <a href="https://github.com/anzol83" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="#">☀️</a>
+            <a href="#" id="dark-mode-toggle">☀️</a>
             <a href="#"><i class="fa-solid fa-music"></i></a>
         </div>
     </nav>
@@ -29,35 +32,117 @@
     <div class="content">
         <div>
             <h2>Anzol Neupane</h2>
-            <p>Hi, I am a software developer with a primarily focused on full-stack development.
-                I am deeply engaged in researching new technologies, continually advancing my skills to deliver innovative
-                applications that optimize user experiences and operational efficiency.
-            </p>
+                <p> Hi, I’m a passionate full-stack developer dedicated to building innovative and user-friendly applications that solve real-world problems. With expertise in both front-end and back-end development, I specialize in creating seamless, scalable, and high-performing solutions that enhance user experiences.
+
+                    I thrive on exploring new technologies, optimizing system performance, and tackling complex challenges that push me to grow. My approach to development is driven by problem-solving, collaboration, and a commitment to best practices. Whether it's developing interactive web applications, integrating modern frameworks, or streamlining workflows, I strive to create intuitive and efficient software that makes an impact.
+                    
+                    For me, coding is more than just writing lines of code—it’s about crafting meaningful solutions that improve everyday experiences. I stay up to date with the latest industry trends to continuously refine my skills and deliver top-notch results. By combining creativity with technical expertise, I aim to build applications that not only function seamlessly but also add real value to users' lives.
+
             <h3><a href="#about" class="about-me">About Me</a></h3>
         </div>
 
-        <section>
-            <h2>Blogs</h2>
-            <ul style="padding: 0; display: flex; gap: 33px;">
-                <li style="font-size:small;">Nov 24</li>
-                <li style="list-style: none; font-size: medium;">
-                    <a href="https://medium.com/@angelneupane83/history-of-the-web-92c3d8ba6239" 
-                    target="_blank" style="color: rgb(255, 255, 255); text-decoration: none;">
-                    My Experience on Learning About the History of the Web</a></li>
-            </ul>
-            <ul style="padding: 0; display: flex; gap: 33px;">
-                <li style="font-size:small;">Dec 24</li>
-                <li style="list-style: none; font-size: medium;">
-                    <a href="https://medium.com/@angelneupane83/understanding-the-css-box-model-a-beginners-guide-93376529c5a6" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none;">
-                    The CSS Box Model: A Beginner's Guide</a>
-                </li>
-            </ul>
-            <p><a href="#about" class="about-me">Read All</a></p>
+        <!-- Skills Section -->
+        <div class="skills-container">
+            <h2>Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skills-marquee">
+                    <div class="skills">
+                        <span><i class="fab fa-html5"></i> HTML</span>
+                        <span><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span><i class="fab fa-js"></i> JavaScript</span>
+                        <span><i class="fab fa-figma"></i> Figma</span>
+                        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span><i class="fab fa-react"></i> React.js</span>
+                        <span><i class="fab fa-node"></i> Node.js</span>
+                        <span><i class="fab fa-node"></i> Express.js</span>
+                        <span><i class="fas fa-database"></i> MongoDB</span>
+                        <span><i class="fas fa-brain"></i> Artificial Intelligence</span>
+                    </div>
+                    <div class="skills"> <!-- Duplicate for seamless effect -->
+                        <span><i class="fab fa-html5"></i> HTML</span>
+                        <span><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span><i class="fab fa-js"></i> JavaScript</span>
+                        <span><i class="fab fa-figma"></i> Figma</span>
+                        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span><i class="fab fa-react"></i> React.js</span>
+                        <span><i class="fab fa-node"></i> Node.js</span>
+                        <span><i class="fab fa-node"></i> Express.js</span>
+                        <span><i class="fas fa-database"></i> MongoDB</span>
+                        <span><i class="fas fa-brain"></i> Artificial Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My recent work section  -->
+        <section id="projects">
+            <center>
+                <h2 class="project-title">Projects</h2>
+            </center>
+            <div class="flex-container">
+                <!-- Project-1  -->
+                <div class="card">
+                    <img src="assets/black-friday.png" alt="Project Image 1">
+                    <h2>Project Name</h2>
+                    <p class="description">This is a short description of the project. It highlights the main features and technologies used.</p>
+                    <div class="links">
+                        <p class="tech-stack">HTML / CSS</p>
+                        <a href="#">🔗 Live Preview</a>
+                        <a href="#">📂 Repo URL</a>
+                    </div>
+                </div>
+
+                <!-- Project-1  -->
+                <div class="card">
+                    <img src="assets/black-friday.png" alt="Project Image 2">
+                    <h2>Project Name</h2>
+                    <p class="description">This is a short description of the project. It highlights the main features and technologies used.</p>
+                    <div class="links">
+                        <p class="tech-stack">HTML / CSS / JavaScript</p>
+                        <a href="#">🔗 Live Preview</a>
+                        <a href="#">📂 Repo URL</a>
+                    </div>
+                </div>
+            </div>
         </section>
-        
 
-        <h2>Projects</h2>
+        <!-- Blogs Section -->
+            <section id="blogs">
+                <h2>Blogs</h2>
+                <ul class="blog-list">
+                    <li>
+                        <span class="blog-date">Feb 7</span>
+                        <a href="https://medium.com/@angelneupane83/how-the-internet-works-a-beginner-friendly-guide-fc8ea25a1fb6" 
+                           target="_blank" class="blog-link">
+                           How the Internet Works: A Beginner-Friendly Guide
+                        </a>
+                    </li>
+                    <li>
+                        <span class="blog-date">Nov 24</span>
+                        <a href="https://medium.com/@angelneupane83/history-of-the-web-92c3d8ba6239" 
+                           target="_blank" class="blog-link">
+                           My Experience on Learning About the History of the Web
+                        </a>
+                    </li>
+                    <li>
+                        <span class="blog-date">Dec 24</span>
+                        <a href="https://medium.com/@angelneupane83/understanding-the-css-box-model-a-beginners-guide-93376529c5a6" 
+                           target="_blank" class="blog-link">
+                           The CSS Box Model: A Beginner's Guide
+                        </a>
+                    </li>
+                    <li>
+                        <span class="blog-date">Feb 8</span>
+                        <a href="https://medium.com/@angelneupane83/single-page-applications-spas-vs-98d5bfb357d8" 
+                           target="_blank" class="blog-link">
+                           Single Page Applications (SPAs) vs. Multi Page Applications (MPAs) in React
+                        </a>
+                    </li>
+                </ul>
+                <p class="read-all"><a href="#about">Read All</a></p>
+            </section>
 
+        <!-- Connect with me section -->
         <h2>Connect With Me</h2>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/anzol-neupane-276894250/" target="_blank"><i class="fab fa-linkedin"></i></a>
