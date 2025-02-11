@@ -1,3 +1,9 @@
+
+
+
+
+
+
 :root {
   --color-primary: rgb(0, 0, 0);
   --color-background: rgb(0, 0, 0);
@@ -14,6 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--color-text);
   background-color: var(--color-background);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav {
@@ -45,6 +52,8 @@ nav .icons a {
 h1, h2 {
   font-size: 2em;
 }
+
+/* Your other CSS styles here... */
 
 .project-title{
   text-align: left;
