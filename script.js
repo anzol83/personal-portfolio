@@ -1,23 +1,18 @@
-// Get the dark mode toggle button
-const toggleButton = document.getElementById('dark-mode-toggle');
+// Dark mode toggle functionality
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-// Check if dark mode is already in local storage (to remember the user's choice)
-if (localStorage.getItem('darkMode') === 'enabled') {
-  document.body.classList.add('darkmode');
-  toggleButton.textContent = '🌙'; // Change to moon icon for dark mode
-}
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('darkmode');
+    darkModeToggle.textContent = body.classList.contains('darkmode') ? '🌙' : '☀️';
+});
 
-// Toggle dark mode on button click
-toggleButton.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default anchor behavior
-  document.body.classList.toggle('darkmode');
-  
-  // Change the icon depending on the mode
-  if (document.body.classList.contains('darkmode')) {
-    toggleButton.textContent = '🌙'; // Moon icon for dark mode
-    localStorage.setItem('darkMode', 'enabled'); // Store user's preference
-  } else {
-    toggleButton.textContent = '☀️'; // Sun icon for light mode
-    localStorage.removeItem('darkMode'); // Remove dark mode preference
-  }
+// Newsletter form handling
+const newsletterForm = document.getElementById('newsletter-form');
+newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = e.target.querySelector('input[type="email"]').value;
+    console.log('Newsletter subscription:', email);
+    e.target.reset();
+    alert('Thanks for subscribing!');
 });
