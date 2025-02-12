@@ -1,220 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZ</title>
+    <title>Anzol Neupane - Creative Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <div>
-            <img src="assets/profile-image.jpg" alt="profile-image" style="height: 80px; border-radius: 50%;">
-        </div>
-        <div class="menu">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#blogs">Blogs</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <div class="icons">
-            <a href="https://github.com/anzol83" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="#" id="dark-mode-toggle">☀️</a>
-            <a href="#"><i class="fa-solid fa-music"></i></a>
+        <div class="nav-content">
+            <div class="nav-left">
+                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop" alt="profile" class="profile-img">
+            </div>
+            <div class="menu">
+                <a href="#" id="about-link">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/anzol83" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <button id="dark-mode-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <div class="content">
-        <div>
-            <h2>Anzol Neupane</h2>
-            <p>Hi, I’m a passionate full-stack developer dedicated to building innovative and user-friendly applications that solve real-world problems. With expertise in both front-end and back-end development, I specialize in creating seamless, scalable, and high-performing solutions that enhance user experiences.
-
-                I thrive on exploring new technologies, optimizing system performance, and tackling complex challenges that push me to grow. My approach to development is driven by problem-solving, collaboration, and a commitment to best practices. Whether it's developing interactive web applications, integrating modern frameworks, or streamlining workflows, I strive to create intuitive and efficient software that makes an impact.
-                
-                For me, coding is more than just writing lines of code—it’s about crafting meaningful solutions that improve everyday experiences. I stay up to date with the latest industry trends to continuously refine my skills and deliver top-notch results. By combining creativity with technical expertise, I aim to build applications that not only function seamlessly but also add real value to users' lives.</p>
-            <h3><a href="#about" class="about-me">About Me</a></h3>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="skills-container">
-            <h2>Skills</h2>
-            <div class="skills-wrapper">
-                <div class="skills-marquee">
-                    <div class="skills">
-                        <span><i class="fab fa-html5"></i> HTML</span>
-                        <span><i class="fab fa-css3-alt"></i> CSS</span>
-                        <span><i class="fab fa-js"></i> JavaScript</span>
-                        <span><i class="fab fa-figma"></i> Figma</span>
-                        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                        <span><i class="fab fa-react"></i> React.js</span>
-                        <span><i class="fab fa-node"></i> Node.js</span>
-                        <span><i class="fab fa-node"></i> Express.js</span>
-                        <span><i class="fas fa-database"></i> MongoDB</span>
-                        <span><i class="fas fa-brain"></i> AI</span>
-                    </div>
-                    <div class="skills">
-                        <span><i class="fab fa-html5"></i> HTML</span>
-                        <span><i class="fab fa-css3-alt"></i> CSS</span>
-                        <span><i class="fab fa-js"></i> JavaScript</span>
-                        <span><i class="fab fa-figma"></i> Figma</span>
-                        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                        <span><i class="fab fa-react"></i> React.js</span>
-                        <span><i class="fab fa-node"></i> Node.js</span>
-                        <span><i class="fab fa-node"></i> Express.js</span>
-                        <span><i class="fas fa-database"></i> MongoDB</span>
-                        <span><i class="fas fa-brain"></i> AI</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Projects Section -->
-<section id="projects">
-    <h2 class="project-title">Featured Projects</h2>
-    <div class="flex-container">
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/black-friday.png" alt="Black Friday Project">
-                <div class="card-overlay">
-                    <div class="overlay-content">
-                        <a href="https://black-friday-inky.vercel.app/" class="preview-btn" target="_blank">Live Preview</a>
-                        <a href="https://github.com/anzol83/Black-Friday" class="code-btn" target="_blank">View Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <h2>Black Friday</h2>
-                <p class="description">A responsive e-commerce landing page showcasing Black Friday deals with modern design principles and smooth animations.</p>
-                <div class="tech-badges">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/ntdl.png" alt="Not To Do List Project">
-                <div class="card-overlay">
-                    <div class="overlay-content">
-                        <a href="https://not-to-do-list-iota.vercel.app/" class="preview-btn" target="_blank">Live Preview</a>
-                        <a href="https://github.com/anzol83/Not-To-Do-List" class="code-btn" target="_blank">View Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <h2>Not To Do List</h2>
-                <p class="description">An innovative twist on traditional todo apps, helping users identify and avoid productivity-draining habits of the day.</p>
-                <div class="tech-badges">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/space-expo.png" alt="Space Exploration Hub">
-                <div class="card-overlay">
-                    <div class="overlay-content">
-                        <a href="https://space-exploration-hub.vercel.app/" class="preview-btn" target="_blank">Live Preview</a>
-                        <a href="https://github.com/anzol83/Space-Exploration-Hub" class="code-btn" target="_blank">View Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <h2>Space Exploration Hub</h2>
-                <p class="description">An immersive web experience showcasing space exploration with interactive elements and stunning visuals.</p>
-                <div class="tech-badges">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/simple-calc.png" alt="Calculator">
-                <div class="card-overlay">
-                    <div class="overlay-content">
-                        <a href="https://simple-calc-ashy.vercel.app/" class="preview-btn" target="_blank">Live Preview</a>
-                        <a href="https://github.com/anzol83/simple-calc" class="code-btn" target="_blank">View Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <h2>Calculator</h2>
-                <p class="description">A sleek and functional calculator application with a modern interface and comprehensive mathematical operations.</p>
-                <div class="tech-badges">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-            </div>
-        </div>
+    <div class="mobile-menu">
+        <a href="#" class="mobile-link" id="about-link-mobile">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#blogs" class="mobile-link">Blogs</a>
+        <a href="#contact" class="mobile-link">Contact</a>
     </div>
-</section>
 
-        <!-- Blogs Section -->
-        <section id="blogs">
-            <h2>Blogs</h2>
-            <ul class="blog-list">
-                <li>
-                    <span class="blog-date">Feb 7</span>
-                    <a href="https://medium.com/@angelneupane83/how-the-internet-works-a-beginner-friendly-guide-fc8ea25a1fb6" 
-                       target="_blank" class="blog-link">
-                       How the Internet Works: A Beginner-Friendly Guide
-                    </a>
-                </li>
-                <li>
-                    <span class="blog-date">Nov 24</span>
-                    <a href="https://medium.com/@angelneupane83/history-of-the-web-92c3d8ba6239" 
-                       target="_blank" class="blog-link">
-                       My Experience on Learning About the History of the Web
-                    </a>
-                </li>
-                <li>
-                    <span class="blog-date">Dec 24</span>
-                    <a href="https://medium.com/@angelneupane83/understanding-the-css-box-model-a-beginners-guide-93376529c5a6" 
-                       target="_blank" class="blog-link">
-                       The CSS Box Model: A Beginner's Guide
-                    </a>
-                </li>
-                <li>
-                    <span class="blog-date">Feb 8</span>
-                    <a href="https://medium.com/@angelneupane83/single-page-applications-spas-vs-98d5bfb357d8" 
-                       target="_blank" class="blog-link">
-                       Single Page Applications (SPAs) vs. Multi Page Applications (MPAs) in React
-                    </a>
-                </li>
-            </ul>
-            <p class="read-all"><a href="#about">Read All</a></p>
+    <main class="content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="name">Anzol Neupane</h1>
+                <span id="typed-text"></span>
+                <p class="hero-description">Creative developer crafting digital experiences that merge innovation with functionality.</p>
+                <button class="about-btn" id="about-btn">About Me</button>
+            </div>
         </section>
 
-        <!-- Newsletter Section -->
-        <section id="newsletter" class="newsletter-section">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to my newsletter for the latest updates on projects and tech articles.</p>
-            <form id="newsletter-form" class="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=800&q=80" alt="Black Friday Project">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://black-friday-inky.vercel.app/" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                                <a href="https://github.com/anzol83/Black-Friday" class="project-btn outline" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Black Friday</h3>
+                        <p>A responsive e-commerce landing page showcasing Black Friday deals with modern design principles and smooth animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80" alt="Not To Do List">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://not-to-do-list-iota.vercel.app/" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                                <a href="https://github.com/anzol83/Not-To-Do-List" class="project-btn outline" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Not To Do List</h3>
+                        <p>An innovative twist on traditional todo apps, helping users identify and avoid productivity-draining habits.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-projects">
+                <a href="#" class="view-all-btn">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="blogs" class="section">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="blogs-container">
+                <div class="blog-post">
+                    <div class="blog-date">Feb 7, 2024</div>
+                    <h3 class="blog-title">How the Internet Works: A Beginner-Friendly Guide</h3>
+                    <p class="blog-excerpt">A comprehensive guide to understanding the fundamental concepts of how the internet functions...</p>
+                    <a href="https://medium.com/@angelneupane83/how-the-internet-works-a-beginner-friendly-guide-fc8ea25a1fb6" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="blog-post">
+                    <div class="blog-date">Nov 24, 2023</div>
+                    <h3 class="blog-title">My Experience on Learning About the History of the Web</h3>
+                    <p class="blog-excerpt">A journey through the evolution of the World Wide Web and its impact on modern technology...</p>
+                    <a href="https://medium.com/@angelneupane83/history-of-the-web-92c3d8ba6239" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="blog-post">
+                    <div class="blog-date">Dec 24, 2023</div>
+                    <h3 class="blog-title">The CSS Box Model: A Beginner's Guide</h3>
+                    <p class="blog-excerpt">Understanding the fundamental concept of CSS layout and how elements are structured on the web...</p>
+                    <a href="https://medium.com/@angelneupane83/understanding-the-css-box-model-a-beginners-guide-93376529c5a6" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="view-all-blogs">
+                <a href="#" class="view-all-btn">
+                    <span>View All Articles</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Get In Touch</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" required placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
-        </section>
 
-        <!-- Connect with me section -->
-        <section id="contact">
-            <h2>Connect With Me</h2>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/anzol-neupane-276894250/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/az_anzol" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://github.com/anzol83" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anzol-neupane-276894250/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/az_anzol" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/anzol83" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Let's Create Something Amazing Together</h3>
+                <p>Open for collaborations and exciting projects</p>
+                <div class="footer-social">
+                    <a href="https://github.com/anzol83" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anzol-neupane-276894250/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/az_anzol" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:your-email@example.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Anzol Neupane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Creative developer with a passion for building innovative digital experiences. I blend technical expertise with artistic vision to create web solutions that not only function flawlessly but also captivate users.</p>
+                <div class="skills-section">
+                    <h3>Skills & Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
 </body>
 </html>
