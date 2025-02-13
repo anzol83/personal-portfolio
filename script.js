@@ -1,58 +1,44 @@
-// Dark mode functionality
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Typed.js only if the element exists
+    const typedElement = document.getElementById('typed-text');
+    if (typedElement) {
+        const typed = new Typed('#typed-text', {
+            strings: ['Full Stack Developer', 'Web Designer', 'Problem Solver'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+    }
+
+    // Dark mode toggle
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const html = document.documentElement;
-
-    // Set dark mode by default
-    html.classList.add('dark');
-    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    localStorage.setItem('darkMode', 'true');
+    const darkModeIcon = darkModeToggle.querySelector('i');
 
     darkModeToggle.addEventListener('click', () => {
         html.classList.toggle('dark');
-        const isDark = html.classList.contains('dark');
-        localStorage.setItem('darkMode', isDark);
-        darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        darkModeIcon.classList.toggle('fa-sun');
+        darkModeIcon.classList.toggle('fa-moon');
     });
 
-    // Mobile menu functionality
+    // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const menuIcon = menuToggle.querySelector('i');
 
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
-        menuToggle.querySelector('i').classList.toggle('fa-bars');
-        menuToggle.querySelector('i').classList.toggle('fa-times');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-times');
     });
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.mobile-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            menuToggle.querySelector('i').classList.add('fa-bars');
-            menuToggle.querySelector('i').classList.remove('fa-times');
-        });
-    });
-
-    // Typing effect
-    new Typed('#typed-text', {
-        strings: [
-            'Full Stack Developer',
-            'Problem Solver',
-            'Tech Enthusiast'
-        ],
-        typeSpeed: 50,
-        backSpeed: 50,
-        loop: true,
-        cursorChar: '|'
-    });
-
-    // Modal functionality
-    const modal = document.getElementById('about-modal');
+    // About modal
     const aboutBtn = document.getElementById('about-btn');
     const aboutLink = document.getElementById('about-link');
     const aboutLinkMobile = document.getElementById('about-link-mobile');
-    const closeBtn = document.querySelector('.modal-close');
+    const modal = document.getElementById('about-modal');
+    const modalClose = modal.querySelector('.modal-close');
 
     function openModal() {
         modal.classList.add('show');
@@ -64,38 +50,67 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    aboutBtn.addEventListener('click', openModal);
+    // Only add event listener if about button exists (on home page)
+    if (aboutBtn) {
+        aboutBtn.addEventListener('click', openModal);
+    }
+
+    // These elements exist on both pages
     aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
         openModal();
     });
+
     aboutLinkMobile.addEventListener('click', (e) => {
         e.preventDefault();
         openModal();
         mobileMenu.classList.remove('active');
-        menuToggle.querySelector('i').classList.add('fa-bars');
-        menuToggle.querySelector('i').classList.remove('fa-times');
     });
-    closeBtn.addEventListener('click', closeModal);
 
-    window.addEventListener('click', (e) => {
+    modalClose.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
 
-    // Form submission
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.mobile-menu') && !e.target.closest('.menu-toggle')) {
+            mobileMenu.classList.remove('active');
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href') === '#') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    });
+
+    // Form submission (only on home page)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-            window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
+            // Add your form submission logic here
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
         });
     }
 });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anzol Neupane Portfolio</title>
+    <title>Projects - Anzol Neupane Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,10 +15,11 @@
                 <img src="assets/AZ-LOGO.webp" alt="profile" class="profile-img">
             </div>
             <div class="menu">
+                <a href="index.html">Home</a>
                 <a href="#" id="about-link">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="#blogs">Blogs</a>
-                <a href="#contact">Contact</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="index.html#blogs">Blogs</a>
+                <a href="index.html#contact">Contact</a>
             </div>
             <div class="icons">
                 <a href="https://github.com/anzol83" target="_blank" rel="noopener noreferrer">
@@ -35,30 +36,18 @@
     </nav>
 
     <div class="mobile-menu">
+        <a href="index.html" class="mobile-link">Home</a>
         <a href="#" class="mobile-link" id="about-link-mobile">About</a>
-        <a href="#projects" class="mobile-link">Projects</a>
-        <a href="#blogs" class="mobile-link">Blogs</a>
-        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="projects.html" class="mobile-link active">Projects</a>
+        <a href="index.html#blogs" class="mobile-link">Blogs</a>
+        <a href="index.html#contact" class="mobile-link">Contact</a>
     </div>
 
     <main class="content">
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="name">Anzol Neupane</h1>
-                    <span id="typed-text"></span>
-                    <p class="hero-description">Creative developer crafting digital experiences that merge innovation with functionality.</p>
-                    <button class="about-btn" id="about-btn">About Me</button>
-                </div>
-                <div class="hero-image">
-                    <div class="image-glow"></div>
-                    <img src="assets/profile-image.jpg" alt="Anzol Neupane" class="profile-hero-img">
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h2 class="section-title">Featured Projects</h2>
+        <section class="section projects-page">
+            <h1 class="section-title">All Projects</h1>
+            <p class="section-description">Explore my portfolio of web development projects</p>
+            
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
@@ -103,7 +92,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/space-expo.png" alt="space-expo">
+                        <img src="assets/space-expo.png" alt="Space Exploration Hub">
                         <div class="project-overlay">
                             <div class="project-buttons">
                                 <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
@@ -113,17 +102,18 @@
                     </div>
                     <div class="project-info">
                         <h3>Space Exploration Hub</h3>
-                        <p>A modern and responsive portfolio website built with React and Tailwind CSS, featuring smooth animations and dark mode.</p>
+                        <p>An interactive platform for space enthusiasts featuring real-time space data, mission updates, and educational content.</p>
                         <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/simple-calc.png" alt="Simple-Calc">
+                        <img src="assets/simple-calc.png" alt="Simple Calculator">
                         <div class="project-overlay">
                             <div class="project-buttons">
                                 <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
@@ -132,8 +122,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Simple Calc</h3>
-                        <p>A weather application that provides real-time weather data, forecasts, and interactive weather maps using OpenWeather API.</p>
+                        <h3>Simple Calculator</h3>
+                        <p>A sleek and intuitive calculator application with advanced mathematical functions and responsive design.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -141,70 +131,91 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="view-all-projects">
-                <a href="#" class="view-all-btn">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
 
-        <section id="blogs" class="section">
-            <h2 class="section-title">Latest Articles</h2>
-            <div class="blogs-container">
-                <div class="blog-post">
-                    <div class="blog-date">Feb 7, 2024</div>
-                    <h3 class="blog-title">How the Internet Works: A Beginner-Friendly Guide</h3>
-                    <p class="blog-excerpt">A comprehensive guide to understanding the fundamental concepts of how the internet functions...</p>
-                    <a href="https://medium.com/@angelneupane83/how-the-internet-works-a-beginner-friendly-guide-fc8ea25a1fb6" class="read-more" target="_blank" rel="noopener noreferrer">
-                        Read More <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="blog-post">
-                    <div class="blog-date">Nov 24, 2023</div>
-                    <h3 class="blog-title">My Experience on Learning About the History of the Web</h3>
-                    <p class="blog-excerpt">A journey through the evolution of the World Wide Web and its impact on modern technology...</p>
-                    <a href="https://medium.com/@angelneupane83/history-of-the-web-92c3d8ba6239" class="read-more" target="_blank" rel="noopener noreferrer">
-                        Read More <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/weather-app.png" alt="Weather Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>A comprehensive weather application providing real-time forecasts, interactive maps, and detailed weather data visualization.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>API Integration</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="blog-post">
-                    <div class="blog-date">Dec 24, 2023</div>
-                    <h3 class="blog-title">The CSS Box Model: A Beginner's Guide</h3>
-                    <p class="blog-excerpt">Understanding the fundamental concept of CSS layout and how elements are structured on the web...</p>
-                    <a href="https://medium.com/@angelneupane83/understanding-the-css-box-model-a-beginners-guide-93376529c5a6" class="read-more" target="_blank" rel="noopener noreferrer">
-                        Read More <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/task-manager.png" alt="Task Manager">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Manager</h3>
+                        <p>A full-stack task management application with user authentication, real-time updates, and collaborative features.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="view-all-blogs">
-                <a href="#" class="view-all-btn">
-                    <span>View All Articles</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
 
-        <section id="contact" class="section">
-            <h2 class="section-title">Get In Touch</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/fitness-tracker.png" alt="Fitness Tracker">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Fitness Tracker</h3>
+                        <p>A comprehensive fitness tracking application with workout planning, progress monitoring, and statistical analysis.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required placeholder="Your Email">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/recipe-finder.png" alt="Recipe Finder">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">Live Preview</a>
+                                <a href="#" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Recipe Finder</h3>
+                        <p>A recipe discovery platform with advanced search functionality, nutritional information, and meal planning features.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" id="subject" name="subject" required placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            </div>
         </section>
     </main>
 
@@ -251,7 +262,7 @@
                     For me, coding is more than just writing lines of code—it's about crafting meaningful solutions that improve everyday 
                     experiences. I stay up to date with the latest industry trends to continuously refine my skills and deliver top-notch 
                     results. By combining creativity with technical expertise, I aim to build applications that not only function seamlessly 
-                    but also add real value to users' lives.</p><br>
+                    but also add real value to users' lives.</p>
                 <div class="skills-section">
                     <h3>Skills & Technologies</h3>
                     <div class="skills-grid">
