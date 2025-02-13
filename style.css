@@ -281,6 +281,8 @@ nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Resume Section */
+
 .resume-btn {
   background-color: transparent;
   color: var(--primary-color);
@@ -303,6 +305,8 @@ nav {
 .resume-btn:hover i {
   transform: translateY(-2px);
 }
+
+/* Projects Section */
 
 .section {
   padding: 4rem 0;
@@ -509,6 +513,8 @@ nav {
   transform: translateX(4px);
 }
 
+/* Blogs Section */
+
 .blogs-container {
   max-width: 800px;
   margin: 0 auto;
@@ -551,6 +557,8 @@ nav {
 .read-more:hover i {
   transform: translateX(4px);
 }
+
+/* Form Section */
 
 .contact-form {
   max-width: 600px;
@@ -599,6 +607,8 @@ nav {
   opacity: 0.9;
   transform: translateY(-2px);
 }
+
+/* Footer Section */
 
 .footer {
   background-color: var(--accent-color);
@@ -784,7 +794,7 @@ html.dark {
   }
 
   .hero-image {
-    margin-top: -40px;
+    margin-top: -100px;
   }
 
   .profile-hero-img {
@@ -847,20 +857,20 @@ html.dark {
 
 /* Projects.html */
 .projects-page {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .section-description {
   text-align: center;
   color: var(--secondary-color);
-  max-width: 600px;
+  max-width: 500px;
   margin: -2rem auto 3rem;
   font-size: 1.1rem;
 }
 
 .menu a.active {
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .menu a.active::after {
@@ -870,5 +880,5 @@ html.dark {
 .mobile-link.active {
   background-color: var(--accent-color);
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 500;
 }
