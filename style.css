@@ -232,19 +232,31 @@ nav {
   max-width: 600px;
 }
 
-.about-btn {
-  display: inline-block;
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about-btn, .resume-btn {
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  text-decoration: none;
   border-radius: 4px;
   transition: var(--transition);
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+}
+
+.about-btn {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--primary-color);
   z-index: 1;
-  cursor: pointer;
 }
 
 .about-btn::before {
@@ -267,6 +279,29 @@ nav {
   color: var(--primary-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.resume-btn i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn:hover i {
+  transform: translateY(-2px);
 }
 
 .section {
@@ -743,26 +778,47 @@ html.dark {
   }
 
   .hero-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     gap: 2rem;
   }
 
+  .hero-image {
+    margin-top: -20px;
+  }
+
   .profile-hero-img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
 
   .hero-description {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .hero-text {
+    margin-top: -20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-btn, .resume-btn {
+    min-width: 180px;
+  }
 }
 
 @media (max-width: 480px) {
   .profile-hero-img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
   }
 
   .name {
@@ -772,12 +828,24 @@ html.dark {
   .hero-description {
     font-size: 1.1rem;
   }
+
+  .hero-text {
+    margin-top: -10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .about-btn, .resume-btn {
+    width: 100%;
+    min-width: unset;
+  }
 }
 
-
-
 /* Projects.html */
-
 .projects-page {
   padding-top: 120px;
 }
@@ -788,31 +856,6 @@ html.dark {
   max-width: 600px;
   margin: -2rem auto 3rem;
   font-size: 1.1rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 0 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .projects-grid {
-      gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-      grid-template-columns: 1fr;
-  }
-
-  .projects-page {
-      padding-top: 100px;
-  }
 }
 
 .menu a.active {

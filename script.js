@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typedElement = document.getElementById('typed-text');
     if (typedElement) {
         const typed = new Typed('#typed-text', {
-            strings: ['Full Stack Developer', 'Web Designer', 'Problem Solver'],
+            strings: ['Full Stack Developer', 'Web3 Enthusiast', 'Problem Solver'],
             typeSpeed: 50,
             backSpeed: 30,
             backDelay: 2000,
