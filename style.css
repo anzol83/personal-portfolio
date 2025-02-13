@@ -603,7 +603,7 @@ nav {
 .footer {
   background-color: var(--accent-color);
   padding: 3rem 0 1.5rem;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
 .footer-content {
@@ -784,7 +784,7 @@ html.dark {
   }
 
   .hero-image {
-    margin-top: -20px;
+    margin-top: -40px;
   }
 
   .profile-hero-img {
@@ -847,7 +847,7 @@ html.dark {
 
 /* Projects.html */
 .projects-page {
-  padding-top: 120px;
+  padding-top: 20px;
 }
 
 .section-description {
