@@ -308,9 +308,9 @@ nav {
 
 /* Projects Section */
 
-/* .section {
+.section {
   padding: 2rem 0;
-} */
+}
 
 .section-title {
   font-size: 2.5rem;
@@ -794,7 +794,7 @@ html.dark {
   }
 
   .hero-image {
-    margin-top: -100px;
+    margin-top: -150px;
   }
 
   .profile-hero-img {
