@@ -1,26 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Typed.js only if the element exists
-    const typedElement = document.getElementById('typed-text');
-    if (typedElement) {
-        const typed = new Typed('#typed-text', {
-            strings: ['Full Stack Developer', 'Web3 Enthusiast', 'Problem Solver'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true
-        });
-    }
-
     // Dark mode toggle
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const html = document.documentElement;
     const darkModeIcon = darkModeToggle.querySelector('i');
 
+    function updateDarkModeIcon() {
+        if (html.classList.contains('dark')) {
+            darkModeIcon.className = 'fas fa-moon';
+        } else {
+            darkModeIcon.className = 'fas fa-sun';
+        }
+    }
+
     darkModeToggle.addEventListener('click', () => {
         html.classList.toggle('dark');
-        darkModeIcon.classList.toggle('fa-sun');
-        darkModeIcon.classList.toggle('fa-moon');
+        updateDarkModeIcon();
+        localStorage.setItem('darkMode', html.classList.contains('dark'));
     });
+
+    // Check for saved dark mode preference
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode === 'true') {
+        html.classList.add('dark');
+        updateDarkModeIcon();
+    }
 
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
@@ -29,88 +32,70 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
-        menuIcon.classList.toggle('fa-bars');
-        menuIcon.classList.toggle('fa-times');
+        menuIcon.className = mobileMenu.classList.contains('active') 
+            ? 'fas fa-times' 
+            : 'fas fa-bars';
     });
 
-    // About modal
-    const aboutBtn = document.getElementById('about-btn');
-    const aboutLink = document.getElementById('about-link');
-    const aboutLinkMobile = document.getElementById('about-link-mobile');
-    const modal = document.getElementById('about-modal');
-    const modalClose = modal.querySelector('.modal-close');
-
-    function openModal() {
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        modal.classList.remove('show');
-        document.body.style.overflow = '';
-    }
-
-    // Only add event listener if about button exists (on home page)
-    if (aboutBtn) {
-        aboutBtn.addEventListener('click', openModal);
-    }
-
-    // These elements exist on both pages
-    aboutLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-    });
-
-    aboutLinkMobile.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-        mobileMenu.classList.remove('active');
-    });
-
-    modalClose.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.mobile-menu') && !e.target.closest('.menu-toggle')) {
-            mobileMenu.classList.remove('active');
-            menuIcon.classList.remove('fa-times');
-            menuIcon.classList.add('fa-bars');
-        }
-    });
-
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            if (this.getAttribute('href') === '#') return;
-            
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                mobileMenu.classList.remove('active');
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-            }
+    // Typed.js initialization
+    if (document.getElementById('typed-text')) {
+        new Typed('#typed-text', {
+            strings: [
+                'Full Stack Developer',
+                'UI/UX Enthusiast',
+                'Problem Solver',
+                'Tech Explorer'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
         });
-    });
+    }
 
-    // Form submission (only on home page)
+    // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Add your form submission logic here
-            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Here you would typically send the form data to your server
+            console.log('Form submitted:', formData);
+            
+            // Reset form
             contactForm.reset();
+            
+            // Show success message (you can customize this)
+            alert('Thank you for your message! I will get back to you soon.');
         });
     }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.remove('active');
+                menuIcon.className = 'fas fa-bars';
+            }
+        });
+    });
 });

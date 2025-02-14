@@ -1,32 +1,43 @@
-:root {
-  --primary-color: #000000;
-  --secondary-color: #666666;
-  --text-color: #000000;
-  --bg-color: #ffffff;
-  --accent-color: #f5f5f5;
-  --border-color: #e0e0e0;
-  --transition: all 0.3s ease;
+/* 
+ * CSS Custom Properties
+ * Define reusable values as CSS variables for easy theme customization
+ * and consistent styling across the website
+ */
+ :root {
+  --primary-color: #000000;    /* Main brand color */
+  --secondary-color: #666666;  /* Secondary text and elements */
+  --text-color: #000000;       /* Default text color */
+  --bg-color: #ffffff;         /* Background color */
+  --accent-color: #f5f5f5;     /* Subtle background variations */
+  --border-color: #e0e0e0;     /* Border and separator color */
+  --transition: all 0.3s ease; /* Standard transition for animations */
 }
 
+/* Reset default styles and set box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Enable smooth scrolling behavior and add padding for fixed header */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 80px; /* Accounts for fixed header height */
 }
 
+/* Base body styles */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
 }
 
+/* Navigation Bar
+ * Fixed position header with shadow and z-index to stay on top
+ */
 nav {
   position: fixed;
   top: 0;
@@ -37,6 +48,7 @@ nav {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation content container */
 .nav-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -46,6 +58,7 @@ nav {
   justify-content: space-between;
 }
 
+/* Left side of navigation (logo area) */
 .nav-left {
   display: flex;
   align-items: center;
@@ -57,6 +70,7 @@ nav {
   font-weight: 600;
 }
 
+/* Profile image in navigation */
 .profile-img {
   width: 50px;
   height: 50px;
@@ -65,11 +79,13 @@ nav {
   border: 2px solid var(--primary-color);
 }
 
+/* Navigation menu links */
 .menu {
   display: flex;
   gap: 2rem;
 }
 
+/* Individual menu links */
 .menu a {
   color: var(--text-color);
   text-decoration: none;
@@ -79,6 +95,7 @@ nav {
   padding-bottom: 4px;
 }
 
+/* Animated underline effect for menu links */
 .menu a::after {
   content: '';
   position: absolute;
@@ -90,10 +107,12 @@ nav {
   transition: width 0.3s ease;
 }
 
-.menu a:hover::after {
+.menu a:hover::after,
+.menu a.active::after {
   width: 100%;
 }
 
+/* Navigation icons (GitHub, dark mode toggle, menu) */
 .icons {
   display: flex;
   gap: 1.5rem;
@@ -112,10 +131,12 @@ nav {
 
 .icons a:hover, .icons button:hover {
   color: var(--primary-color);
+  transform: translateY(-2px);
 }
 
+/* Mobile menu toggle button */
 .menu-toggle {
-  display: none;
+  display: none; /* Hidden by default, shown on mobile */
   background: none;
   border: none;
   cursor: pointer;
@@ -128,6 +149,7 @@ nav {
   transition: transform 0.3s ease;
 }
 
+/* Mobile navigation menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -142,10 +164,12 @@ nav {
   z-index: 999;
 }
 
+/* Active state for mobile menu */
 .mobile-menu.active {
   transform: translateY(0);
 }
 
+/* Mobile menu links */
 .mobile-link {
   display: block;
   padding: 1rem 2rem;
@@ -156,17 +180,23 @@ nav {
   border-bottom: 1px solid var(--border-color);
 }
 
-.mobile-link:hover {
+.mobile-link:hover,
+.mobile-link.active {
   background-color: var(--accent-color);
   padding-left: 2.5rem;
+  color: var(--primary-color);
 }
 
+/* Main content container */
 .content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 2rem 2rem;
 }
 
+/* Hero Section
+ * Full-height landing section with profile image and introduction
+ */
 .hero-section {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -174,6 +204,7 @@ nav {
   justify-content: center;
 }
 
+/* Hero content layout */
 .hero-content {
   width: 100%;
   display: flex;
@@ -182,10 +213,26 @@ nav {
   gap: 4rem;
 }
 
+/* Hero text content */
 .hero-text {
   flex: 1;
 }
 
+.name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Hero image container with glow effect */
 .hero-image {
   flex: 1;
   position: relative;
@@ -194,6 +241,7 @@ nav {
   align-items: center;
 }
 
+/* Glow effect behind profile image */
 .image-glow {
   position: absolute;
   width: 100%;
@@ -203,6 +251,7 @@ nav {
   z-index: 1;
 }
 
+/* Profile image styling */
 .profile-hero-img {
   width: 400px;
   height: 400px;
@@ -219,25 +268,14 @@ nav {
   transform: scale(1.02);
 }
 
-.name {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  color: var(--secondary-color);
-  margin-bottom: 2rem;
-  max-width: 600px;
-}
-
+/* Hero section buttons */
 .hero-buttons {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
+/* Common button styles */
 .about-btn, .resume-btn {
   min-width: 160px;
   display: inline-flex;
@@ -249,8 +287,10 @@ nav {
   font-weight: 500;
   cursor: pointer;
   border: 2px solid var(--primary-color);
+  text-decoration: none;
 }
 
+/* Primary button (About) */
 .about-btn {
   background-color: var(--primary-color);
   color: var(--bg-color);
@@ -281,13 +321,11 @@ nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Resume Section */
-
+/* Secondary button (Resume) */
 .resume-btn {
   background-color: transparent;
   color: var(--primary-color);
   gap: 0.5rem;
-  text-decoration: none;
 }
 
 .resume-btn i {
@@ -306,8 +344,7 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Projects Section */
-
+/* Section Styles */
 .section {
   padding: 2rem 0;
 }
@@ -317,8 +354,12 @@ nav {
   font-weight: 700;
   margin-bottom: 3rem;
   text-align: center;
+  color: var(--primary-color);
 }
 
+/* Projects Section
+ * Grid layout for displaying project cards
+ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -328,6 +369,7 @@ nav {
   margin: 0 auto;
 }
 
+/* Individual project card */
 .project-card {
   background-color: var(--accent-color);
   border-radius: 12px;
@@ -345,6 +387,7 @@ nav {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* Project image container */
 .project-image {
   position: relative;
   height: 200px;
@@ -358,6 +401,11 @@ nav {
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+/* Project overlay with buttons */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -372,14 +420,11 @@ nav {
   transition: all 0.4s ease;
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.1);
-}
-
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
+/* Project buttons */
 .project-buttons {
   display: flex;
   gap: 1rem;
@@ -411,6 +456,7 @@ nav {
   transform: translateY(-2px);
 }
 
+/* Project information */
 .project-info {
   padding: 1.5rem;
   flex-grow: 1;
@@ -433,6 +479,7 @@ nav {
   flex-grow: 1;
 }
 
+/* Project technologies */
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -456,6 +503,7 @@ nav {
   transform: translateY(-2px);
 }
 
+/* View all buttons */
 .view-all-projects,
 .view-all-blogs {
   text-align: center;
@@ -500,10 +548,6 @@ nav {
   z-index: 1;
 }
 
-.view-all-btn i {
-  transition: transform 0.3s ease;
-}
-
 .view-all-btn:hover {
   color: var(--bg-color);
   transform: translateY(-2px);
@@ -513,8 +557,9 @@ nav {
   transform: translateX(4px);
 }
 
-/* Blogs Section */
-
+/* Blog Section
+ * Article cards with dates and excerpts
+ */
 .blogs-container {
   max-width: 800px;
   margin: 0 auto;
@@ -523,6 +568,11 @@ nav {
 .blog-post {
   padding: 2rem;
   border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.blog-post:hover {
+  background-color: var(--accent-color);
 }
 
 .blog-date {
@@ -534,6 +584,7 @@ nav {
 .blog-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 .blog-excerpt {
@@ -550,16 +601,11 @@ nav {
   gap: 0.5rem;
 }
 
-.read-more i {
-  transition: transform 0.3s ease;
-}
-
 .read-more:hover i {
   transform: translateX(4px);
 }
 
-/* Form Section */
-
+/* Contact Form Section */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -577,6 +623,8 @@ nav {
   border-radius: 4px;
   font-family: inherit;
   transition: var(--transition);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .form-group input:focus,
@@ -608,12 +656,109 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Footer Section */
+/* About Page Styles */
+.about-section {
+  padding-top: 27px;
+}
 
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* GitHub Contributions Section */
+.github-contributions {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--accent-color);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.github-contributions h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.contributions-graph {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+  background: var(--bg-color);
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contributions-graph:hover {
+  transform: scale(1.02);
+}
+
+/* Skills Section */
+.skills-section {
+  margin-top: 3rem;
+}
+
+.skills-section h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--accent-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item i {
+  font-size: 1.5rem;
+}
+
+/* Skill icons colors */
+.skill-item .fa-html5 { color: #E44D26; }
+.skill-item .fa-css3-alt { color: #264DE4; }
+.skill-item .fa-js { color: #F7DF1E; }
+.skill-item .fa-react { color: #61DAFB; }
+.skill-item .fa-node-js { color: #339933; }
+.skill-item .fa-git-alt { color: #F05032; }
+.skill-item .fa-database { color: #47A248; }
+.skill-item .fa-bootstrap { color: #7952B3; }
+
+/* Footer Section */
 .footer {
   background-color: var(--accent-color);
   padding: 3rem 0 1.5rem;
-  /* margin-top: 4rem; */
+  margin-top: 4rem;
 }
 
 .footer-content {
@@ -630,6 +775,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }
 
 .footer-info p {
@@ -677,90 +823,7 @@ nav {
   font-size: 0.875rem;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
-
-.modal.show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background-color: var(--bg-color);
-  padding: 3rem;
-  max-width: 800px;
-  width: 90%;
-  border-radius: 12px;
-  position: relative;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: var(--text-color);
-  transition: var(--transition);
-}
-
-.modal-close:hover {
-  background: var(--primary-color);
-  color: var(--bg-color);
-  transform: rotate(90deg);
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--accent-color);
-  border-radius: 8px;
-  transition: var(--transition);
-}
-
-.skill-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.skill-item i {
-  font-size: 1.5rem;
-}
-
-.skill-item .fa-html5 { color: #E44D26; }
-.skill-item .fa-css3-alt { color: #264DE4; }
-.skill-item .fa-js { color: #F7DF1E; }
-.skill-item .fa-react { color: #61DAFB; }
-.skill-item .fa-node-js { color: #339933; }
-.skill-item .fa-git-alt { color: #F05032; }
-.skill-item .fa-database { color: #47A248; }
-.skill-item .fa-python { color: #3776AB; }
-
+/* Dark Mode Theme */
 html.dark {
   --primary-color: #ffffff;
   --secondary-color: #999999;
@@ -770,7 +833,11 @@ html.dark {
   --border-color: #333333;
 }
 
+/* Responsive Design
+ * Media queries for different screen sizes
+ */
 @media (max-width: 768px) {
+  /* Tablet and mobile styles */
   .menu {
     display: none;
   }
@@ -822,9 +889,23 @@ html.dark {
   .about-btn, .resume-btn {
     min-width: 180px;
   }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .github-contributions {
+    padding: 1.5rem;
+  }
+
+  .github-contributions h2,
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  /* Mobile-specific styles */
   .profile-hero-img {
     width: 200px;
     height: 200px;
@@ -853,32 +934,25 @@ html.dark {
     width: 100%;
     min-width: unset;
   }
-}
 
-/* Projects.html */
-.projects-page {
-  padding-top: 40px;
-}
+  .about-content {
+    padding: 0 1rem;
+  }
 
-.section-description {
-  text-align: center;
-  color: var(--secondary-color);
-  max-width: 500px;
-  margin: -2rem auto 3rem;
-  font-size: 1.1rem;
-}
+  .github-contributions {
+    padding: 1rem;
+    margin: 2rem 0;
+  }
 
-.menu a.active {
-  color: var(--primary-color);
-  font-weight: 500;
-}
+  .section-title {
+    font-size: 2rem;
+  }
 
-.menu a.active::after {
-  width: 100%;
-}
+  .blog-title {
+    font-size: 1.25rem;
+  }
 
-.mobile-link.active {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  font-weight: 500;
+  .footer-info h3 {
+    font-size: 1.25rem;
+  }
 }

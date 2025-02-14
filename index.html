@@ -15,9 +15,9 @@
                 <img src="assets/AZ-LOGO.webp" alt="profile" class="profile-img">
             </div>
             <div class="menu">
-                <a href="#" id="about-link">About</a>
+                <a href="#" class="active">Home</a>
+                <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
-                <a href="#blogs">Blogs</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="icons">
@@ -35,9 +35,9 @@
     </nav>
 
     <div class="mobile-menu">
-        <a href="#" class="mobile-link" id="about-link-mobile">About</a>
+        <a href="#" class="mobile-link active">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
         <a href="projects.html" class="mobile-link">Projects</a>
-        <a href="#blogs" class="mobile-link">Blogs</a>
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
@@ -49,8 +49,8 @@
                     <span id="typed-text"></span> <br>
                     <p class="hero-description">Creative developer crafting digital experiences that merge innovation with functionality.</p>
                     <div class="hero-buttons">
-                        <button class="about-btn" id="about-btn">About Me</button>
-                        <a href="assets/resume1.docx" download class="resume-btn">
+                        <a href="about.html" class="about-btn">About Me</a>
+                        <a href="assets/resume1.docx" class="resume-btn">
                             <i class="fas fa-download"></i>
                             Resume
                         </a>
@@ -239,65 +239,6 @@
             </div>
         </div>
     </footer>
-
-    <div id="about-modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>Hi, I'm a passionate full-stack developer dedicated to building innovative and user-friendly applications 
-                    that solve real-world problems. With expertise in both front-end and back-end development, I specialize in 
-                    creating seamless, scalable, and high-performing solutions that enhance user experiences.
-
-                    I thrive on exploring new technologies, optimizing system performance, and tackling complex challenges that 
-                    push me to grow. My approach to development is driven by problem-solving, collaboration, and a commitment to 
-                    best practices. Whether it's developing interactive web applications, integrating modern frameworks, or streamlining 
-                    workflows, I strive to create intuitive and efficient software that makes an impact.
-                    
-                    For me, coding is more than just writing lines of code—it's about crafting meaningful solutions that improve everyday 
-                    experiences. I stay up to date with the latest industry trends to continuously refine my skills and deliver top-notch 
-                    results. By combining creativity with technical expertise, I aim to build applications that not only function seamlessly 
-                    but also add real value to users' lives.</p><br>
-                <div class="skills-section">
-                    <h3>Skills & Technologies</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-bootstrap"></i>
-                            <span>Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
