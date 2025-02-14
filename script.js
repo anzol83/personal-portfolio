@@ -42,9 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         new Typed('#typed-text', {
             strings: [
                 'Full Stack Developer',
-                'UI/UX Enthusiast',
+                'Web3 Enthusiast',
                 'Problem Solver',
-                'Tech Explorer'
             ],
             typeSpeed: 50,
             backSpeed: 30,
