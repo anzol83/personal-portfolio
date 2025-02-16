@@ -365,7 +365,6 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding: 0 1rem;
-  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -561,7 +560,7 @@ nav {
  * Article cards with dates and excerpts
  */
 .blogs-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -676,7 +675,6 @@ nav {
 }
 
 .about-content {
-  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   background: var(--bg-color);
