@@ -1,8 +1,4 @@
-/* 
- * CSS Custom Properties
- * Define reusable values as CSS variables for easy theme customization
- * and consistent styling across the website
- */
+/* CSS Root Styles */
  :root {
   --primary-color: #000000;    /* Main brand color */
   --secondary-color: #666666;  /* Secondary text and elements */
@@ -21,10 +17,10 @@
 }
 
 /* Enable smooth scrolling behavior and add padding for fixed header */
-html {
+/* html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Accounts for fixed header height */
-}
+  scroll-padding-top: 80px;
+} */
 
 /* Base body styles */
 body {
@@ -32,12 +28,10 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navigation Bar
- * Fixed position header with shadow and z-index to stay on top
- */
+/* Navigation Bar */
 nav {
   position: fixed;
   top: 0;
@@ -136,7 +130,7 @@ nav {
 
 /* Mobile menu toggle button */
 .menu-toggle {
-  display: none; /* Hidden by default, shown on mobile */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -194,11 +188,9 @@ nav {
   padding: 80px 2rem 2rem;
 }
 
-/* Hero Section
- * Full-height landing section with profile image and introduction
- */
+/* Hero Section */
 .hero-section {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +233,7 @@ nav {
   align-items: center;
 }
 
-/* Glow effect behind profile image */
+/* Glow effect */
 .image-glow {
   position: absolute;
   width: 100%;
@@ -275,7 +267,7 @@ nav {
   align-items: center;
 }
 
-/* Common button styles */
+/* about and resume button styles */
 .about-btn, .resume-btn {
   min-width: 160px;
   display: inline-flex;
@@ -290,7 +282,7 @@ nav {
   text-decoration: none;
 }
 
-/* Primary button (About) */
+/* (About) button */
 .about-btn {
   background-color: var(--primary-color);
   color: var(--bg-color);
@@ -321,7 +313,7 @@ nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Secondary button (Resume) */
+/* (Resume) button */
 .resume-btn {
   background-color: transparent;
   color: var(--primary-color);
@@ -357,9 +349,7 @@ nav {
   color: var(--primary-color);
 }
 
-/* Projects Section
- * Grid layout for displaying project cards
- */
+/* Projects Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -556,9 +546,7 @@ nav {
   transform: translateX(4px);
 }
 
-/* Blog Section
- * Article cards with dates and excerpts
- */
+/* Blog Section */
 .blogs-container {
   max-width: 1000px;
   margin: 0 auto;
