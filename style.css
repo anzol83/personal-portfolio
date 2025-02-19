@@ -17,10 +17,10 @@
 }
 
 /* Enable smooth scrolling behavior and add padding for fixed header */
-/* html {
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-} */
+}
 
 /* Base body styles */
 body {
