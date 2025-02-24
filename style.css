@@ -715,45 +715,17 @@ nav {
 
  /* Work Experience Section */
  .work-experience {
-  margin: 4rem 0;
+  margin: 2rem 0;
   position: relative;
 }
 
-.work-experience::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--border-color),
-    transparent
-  );
-}
-
 .work-experience h2 {
-  font-size: 1.8rem;
+  font-size: 1.998rem;
   color: var(--primary-color);
   margin-bottom: 2rem;
   text-align: center;
   position: relative;
   padding-bottom: 1rem;
-}
-
-.work-experience h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--primary-color);
-  border-radius: 2px;
 }
 
 .timeline {
