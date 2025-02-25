@@ -9,6 +9,16 @@
   --transition: all 0.3s ease; /* Standard transition for animations */
 }
 
+/* Dark Mode Theme */
+html.dark {
+  --primary-color: #ffffff;
+  --secondary-color: #999999;
+  --text-color: #ffffff;
+  --bg-color: #000000;
+  --accent-color: #1a1a1a;
+  --border-color: #333333;
+}
+
 /* Reset default styles and set box-sizing */
 * {
   margin: 0;
@@ -974,16 +984,6 @@ nav {
 .footer-bottom p {
   color: var(--secondary-color);
   font-size: 0.875rem;
-}
-
-/* Dark Mode Theme */
-html.dark {
-  --primary-color: #ffffff;
-  --secondary-color: #999999;
-  --text-color: #ffffff;
-  --bg-color: #000000;
-  --accent-color: #1a1a1a;
-  --border-color: #333333;
 }
 
 /* Responsive Design
