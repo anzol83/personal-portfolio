@@ -381,11 +381,6 @@ nav {
   flex-direction: column;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
 /* Project image container */
 .project-image {
   position: relative;
@@ -398,10 +393,6 @@ nav {
   height: 100%;
   object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.1);
 }
 
 /* Project overlay with buttons */
@@ -419,10 +410,6 @@ nav {
   transition: all 0.4s ease;
 }
 
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
 /* Project buttons */
 .project-buttons {
   display: flex;
@@ -430,11 +417,6 @@ nav {
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover .project-buttons {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .project-btn {
@@ -447,12 +429,6 @@ nav {
   font-size: 0.9rem;
   transition: all 0.3s ease;
   border: 2px solid var(--bg-color);
-}
-
-.project-btn:hover {
-  background: transparent;
-  color: var(--bg-color);
-  transform: translateY(-2px);
 }
 
 /* Project information */
@@ -496,10 +472,24 @@ nav {
   transition: all 0.3s ease;
 }
 
-.project-tech span:hover {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  transform: translateY(-2px);
+/* Project Links for Mobile */
+.project-links {
+  display: none; /* Initially hidden */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.project-links a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 /* View all buttons */
@@ -554,6 +544,79 @@ nav {
 
 .view-all-btn:hover i {
   transform: translateX(4px);
+}
+
+/* Hover effect for project card */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for project image */
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+/* Hover effect for project overlay */
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Hover effect for project buttons */
+.project-card:hover .project-buttons {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hover effect for project button */
+.project-btn:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Hover effect for project links */
+.project-card:hover .project-links,
+.project-card:active .project-links {
+  display: block;
+}
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+  }
+
+  /* Show the links directly on mobile */
+  .project-links {
+    display: block; /* Always visible on mobile */
+  }
+
+  .project-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Show the project buttons only on mobile */
+  .project-buttons {
+    display: none; /* Show project buttons on mobile and tablet */
+  }
+}
+
+/* Desktop and Larger Screens (force hidden links) */
+@media screen and (min-width: 769px) {
+  .project-links {
+    display: none; /* Hidden on desktop and larger screens */
+  }
+
+  /* Hide project buttons on desktop and larger screens */
+  .project-buttons {
+    display: none; /* Hide project buttons on larger screens */
+  }
 }
 
 /* Blog Section */
