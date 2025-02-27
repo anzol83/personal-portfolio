@@ -45,35 +45,47 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true
     });
 
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
+    // Contact form submission with Email JS
 
-            // Check if form is valid
-            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-                alert('Please fill in all fields.');
-                return;
-            }
-
-            console.log('Form submitted:', formData);
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-        });
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("qAk6ZIdIAmAwu1GUm"); // Initialize EmailJS with your Public Key
+    
+        const contactForm = document.getElementById("contact-form");
+        
+        if (contactForm) {
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+    
+                // Get form data
+                const formData = {
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    message: document.getElementById("message").value
+                };
+    
+                // Check if form is valid
+                if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+    
+                // Send email using EmailJS
+                emailjs.send("service_hj13f0r", "template_8z6cg1c", formData)
+                    .then(function (response) {
+                        console.log("Email sent successfully!", response);
+                        alert("Thank you for your message! I will get back to you soon.");
+    
+                        // Reset form after successful submission
+                        contactForm.reset();
+                    })
+                    .catch(function (error) {
+                        console.error("Failed to send email:", error);
+                        alert("Oops! Something went wrong. Please try again later.");
+                    });
+            });
+        }
+    });    
 
     // Go to top button
     const goTopBtn = document.getElementById("goTopBtn");
