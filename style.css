@@ -474,13 +474,13 @@ nav {
 
 /* Project Links for Mobile */
 .project-links {
-  display: none; /* Initially hidden */
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  color: white;
+  /* color: white; */
   padding: 10px;
   text-align: center;
 }
@@ -488,7 +488,7 @@ nav {
 .project-links a {
   margin: 0 5px;
   text-decoration: none;
-  color: white;
+  /* color: white; */
   font-weight: bold;
 }
 
@@ -790,6 +790,10 @@ nav {
  .work-experience {
   margin: 2rem 0;
   position: relative;
+}
+
+.index-work{
+  margin: -20px;
 }
 
 .work-experience h2 {

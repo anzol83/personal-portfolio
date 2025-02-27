@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function updateDarkModeIcon() {
             darkModeIcon.className = html.classList.contains("dark")
-                ? "fas fa-sun"
+                ? "fa-regular fa-lightbulb"
                 : "fas fa-moon";
         }
 
